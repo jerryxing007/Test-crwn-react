@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     border: 1px solid black;
-    margin: 0 7.5px 15;
+    margin: 0 7.5px 15px;
     overflow: hidden;
 
     &:hover {
@@ -20,7 +20,10 @@
             opacity: 0.9;
         }
     }
-  
+    &.large {
+      height: 380px;
+    }
+
     &:first-child {
       margin-right: 7.5px;
     }
@@ -29,9 +32,7 @@
       margin-left: 7.5px;
     }
 
-    &.large {
-        height: 380px;
-    }
+   
 
     .background-image {
         width: 100%;
@@ -54,7 +55,7 @@
   
       .title {
         font-weight: bold;
-        margin-bottom: 6px;
+        margin-bottom: 0 6px 0;
         font-size: 22px;
         color: #4a4a4a;
       }

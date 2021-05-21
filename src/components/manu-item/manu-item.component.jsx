@@ -1,8 +1,9 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './manu-item.style.scss'
 
-const ManuItem = ({title, id, imageUrl, size}) => (
-    <div key={id} className={`${size} menu-item`}>
+const ManuItem = ({title, imageUrl, size, linkUrl, history, match}) => (
+    <div className={`${size} menu-item`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
         <div className='background-image' style={{backgroundImage: `url(${imageUrl})`}}/>
         <div className='content'>
             <div className='title'>{title.toUpperCase()}</div>
@@ -11,4 +12,4 @@ const ManuItem = ({title, id, imageUrl, size}) => (
     </div>
 );
 
-export default ManuItem
+export default withRouter(ManuItem)
